@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project of flipcart</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        #buttoncolour:hover {
+            background-color: rgb(72, 72, 243);
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body class="bg-gray-200 h-[100vh] border">
+
+    <nav class="flex flex-wrap justify-evenly p-4 bg-white">
+        <img src="./asserts/logo.svg" alt="" srcset="">
+        <div class="h-[40px] flex items-center rounded-lg bg-slate-100"><i
+                class=" fa-solid fa-magnifying-glass m-2 text-lg "></i><input
+                class="w-[40vw] text-lg outline-0 bg-transparent" type="text"
+                placeholder="Search for product,Brands More ">
+        </div>
+        <i class="fa-regular fa-circle-user m-2 text-lg"></i>
+
+        <button id="buttoncolour" class="w-[100px] h-[40px]  rounded-lg bg-slate-100" type="button">Login</button>
+
+
+        <i class="fa-solid fa-cart-shopping text-lg"></i>
+
+        <button class="w-[100px] h-[40px] flex items-center rounded-lg" type="button">Cart</button>
+
+        <i class="fa-solid fa-store text-lg"></i>
+
+        <button class="w-[100px] h-[40px] flex" type="button">Become a Seller</button>
+        <button type="button" class="w-[30px]">:</button>
+    </nav>
+
+    <div id="category" class="bg-white flex flex-wrap justify-center m-4">
+        <div class=" flex flex-wrap justify-evenly w-[90%]  p-4">
+            <div>
+                <img src="./asserts/Top Offers.webp" alt="">
+                <h1 class="text-center">Top offers</h1>
+
+            </div>
+            <div>
+                <img src="./asserts/mobiles.webp" alt="">
+                <h1 class="text-center">Mobies</h1>
+            </div>
+            <div>
+                <img src="./asserts/Appliances.webp" alt="" srcset="">
+                <h1 class="text-center">Appliances</h1>
+            </div>
+            <div>
+                <img src="./asserts/electronics.webp" alt="" srcset="">
+                <h1 class="text-center">Electronics</h1>
+            </div>
+            <div>
+                <img src="./asserts/fashion.webp" alt="" srcset="">
+                <h1 class="text-center">Fashion</h1>
+            </div>
+            <div>
+                <img src="./asserts/beauty.webp" alt="" srcset="">
+                <h1 class="text-center">Beauty</h1>
+            </div>
+            <div>
+                <img class="justify-self-center" src="./asserts/home and kitchan.webp" alt="" srcset="">
+                <h1>Home & Kitchen</h1>
+            </div>
+            <div>
+                <img src="./asserts/furniture.webp" alt="" srcset="">
+                <h1 class="text-center">Furniture</h1>
+            </div>
+            <div>
+                <img src="./asserts/Travel.webp" alt="" srcset="">
+                <h1 class="text-center">Travel</h1>
+            </div>
+            <div>
+                <img src="./asserts/surfexcel.webp" alt="">
+                <h1 class="text-center">Grocery</h1>
+            </div>
+        </div>
+    </div>
+    <div class="flex">
+        <div class="bg-white mx-3 ">
+
+            <h1 class="font-bold">Best deals on SmartPhones</h1>
+            <div class="flex justify-evenly m-4 p-4 w-[80vw] overflow-x-scroll gap-4">
+                <div class="border border-1 px-3 py-2 min-w-[200px]">
+                    <img class="h-[200px]" src="./asserts/Realmep1 5G.webp" alt="" srcset="">
+                    <h1 class="text-center">Realme p1</h1>
+                    <h1 class="text-center">From ₹ 14,999</h1>
+                </div>
+                <div class="border border-1 px-3 py-2 min-w-[200px]">
+                    <img class="h-[200px]" src="./asserts/VivoT2Pro5G.webp" alt="" srcset="">
+                    <h1 class="text-center">Vivo T2 Pro</h1>
+                    <h1 class="text-center">From ₹ 20,999</h1>
+                </div>
+                <div class="border border-1 px-3 py-2 min-w-[200px]">
+                    <img class="h-[200px]" src="./asserts/PocoM6PRO5G.webp" alt="" srcset="">
+                    <h1 class="text-center">Poco M6 Pro</h1>
+                    <h1 class="text-center">From ₹9,500 </h1>
+                </div>
+                <div class="border border-1 w-[200px] px-3 py-2 grid min-w-[200px]">
+                    <img class="h-[200px] justify-self-center" src="./asserts/Redmi125G.webp" alt="" srcset="">
+                    <h1 class="text-center ">Redmi 12 5G</h1>
+                    <h1 class="text-center">From ₹ 9,999</h1>
+                </div>
+                <div class="border border-1 px-3 py-2 min-w-[200px]">
+                    <img class="h-[200px]" src="./asserts/Motorola edge 50 fusion.webp" alt="" srcset="">
+                    <h1 class="text-center">Moto edge 50 Fusion</h1>
+                    <h1 class="text-center">From ₹ 20,999</h1>
+                </div>
+                <div class="border border-1 px-3 py-2 min-w-[200px]">
+                    <img class="h-[200px]" src="./asserts/RealmE p1 Pro 5G.webp" alt="" srcset="">
+                    <h1 class="text-center">Releme P1 5G</h1>
+                    <h1 class="text-center">From ₹ 19,999</h1>
+                </div>
+
+
+            </div>
+        </div>
+        <div>
+            <img class="h-full " src="/asserts/beatxp.webp" alt="" srcset="">
+        </div>
+    </div>
+
+
+    <div class="flex flex-wrap justify-evenly m-2 bg-white">
+        <div class="m-1">
+            <img src="./asserts/motorolaadd.jpg" alt="" srcset="">
+        </div>
+        <div class="m-1">
+            <img src="./asserts/4kTV.webp" alt="" srcset="">
+        </div>
+        <div class="m-1">
+            <img src="./asserts/laptop.webp" alt="" srcset="">
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <h1>
+        Done by Siddharth
+    </h1>
+</body>
+
+</html>
