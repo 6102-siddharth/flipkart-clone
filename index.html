@@ -7,9 +7,7 @@
     <title>Project of flipcart</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        #buttoncolour:hover {
-            background-color: rgb(72, 72, 243);
-        }
+
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
@@ -18,24 +16,26 @@
 
     <nav class="flex flex-wrap justify-evenly p-4 bg-white">
         <img src="./asserts/logo.svg" alt="" srcset="">
-        <div class="h-[40px] flex items-center rounded-lg bg-slate-100"><i
-                class=" fa-solid fa-magnifying-glass m-2 text-lg "></i><input
-                class="w-[40vw] text-lg outline-0 bg-transparent" type="text"
+        <div class="h-[40px] flex items-center rounded-lg bg-slate-100">
+            <i class=" fa-solid fa-magnifying-glass m-2 text-lg "></i>
+            <input class="w-[40vw] text-lg outline-0 bg-transparent" type="text"
                 placeholder="Search for product,Brands More ">
         </div>
-        <i class="fa-regular fa-circle-user m-2 text-lg"></i>
-
-        <button id="buttoncolour" class="w-[100px] h-[40px]  rounded-lg bg-slate-100" type="button">Login</button>
-
-
-        <i class="fa-solid fa-cart-shopping text-lg"></i>
-
-        <button class="w-[100px] h-[40px] flex items-center rounded-lg" type="button">Cart</button>
-
-        <i class="fa-solid fa-store text-lg"></i>
-
-        <button class="w-[100px] h-[40px] flex" type="button">Become a Seller</button>
-        <button type="button" class="w-[30px]">:</button>
+        <div class=" hover:bg-sky-400 p-1 px-4 rounded-lg">
+            <i class="fa-regular fa-circle-user text-lg"></i>
+            <button id="buttoncolour" class="rounded-lg" type="button">Login</button>
+        </div>
+        <div class="bg-slate-100 p-1 px-4 rounded-lg ">
+            <i class="fa-solid fa-cart-shopping text-lg"></i>
+            <button type="button">Cart</button>
+        </div>
+        <div class="bg-slate-100 p-1 px-4 rounded-lg">
+            <i class="fa-solid fa-store text-lg"></i>
+            <button type="button">Become a Seller</button>
+        </div>
+        <div class="hover:bg-slate-100 p-1 px-4 rounded-lg ">
+            <button type="button"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+        </div>
     </nav>
 
     <div id="category" class="bg-white flex flex-wrap justify-center m-4">
@@ -87,42 +87,62 @@
         <div class="bg-white mx-3 ">
 
             <h1 class="font-bold">Best deals on SmartPhones</h1>
-            <div class="flex justify-evenly m-4 p-4 w-[80vw] overflow-x-scroll gap-4">
-                <div class="border border-1 px-3 py-2 min-w-[200px]">
-                    <img class="h-[200px]" src="./asserts/Realmep1 5G.webp" alt="" srcset="">
-                    <h1 class="text-center">Realme p1</h1>
-                    <h1 class="text-center">From ₹ 14,999</h1>
+            <div class="md:flex justify-evenly m-4 p-4 lg:w-[80vw]  w-[94vw] overflow-x-scroll gap-4">
+                <div class="flex md:block md:border border-1 px-3 py-2 min-w-[200px]">
+                    <img class="h-[64px] md:h-[200px]" src="./asserts/Realmep1 5G.webp" alt="" srcset="">
+                    <div class="ml-3">
+                        <h1 class="md:text-center text-sm font-bold">Realme p1</h1>
+                        <h1 class="md:text-center text-sm">From ₹ 14,999</h1>
+                    </div>
+                    <div class="md:hidden"><i class="fa-solid fa-greater-than"></i></div>
                 </div>
-                <div class="border border-1 px-3 py-2 min-w-[200px]">
-                    <img class="h-[200px]" src="./asserts/VivoT2Pro5G.webp" alt="" srcset="">
-                    <h1 class="text-center">Vivo T2 Pro</h1>
-                    <h1 class="text-center">From ₹ 20,999</h1>
+                <div class="flex md:block md:border border-1 px-3 py-2 min-w-[200px]">
+                    <img class="h-[64px] md:h-[200px]" src="./asserts/VivoT2Pro5G.webp" alt="" srcset="">
+                    <div class="ml-3">
+                        <h1 class="md:text-center text-sm font-bold">Vivo T2 Pro</h1>
+                        <h1 class="md:text-center text-sm">From ₹ 20,999</h1>
+                    </div>
+                    <div class="md:hidden"><i class="fa-solid fa-greater-than"></i></div>
                 </div>
-                <div class="border border-1 px-3 py-2 min-w-[200px]">
-                    <img class="h-[200px]" src="./asserts/PocoM6PRO5G.webp" alt="" srcset="">
-                    <h1 class="text-center">Poco M6 Pro</h1>
-                    <h1 class="text-center">From ₹9,500 </h1>
-                </div>
-                <div class="border border-1 w-[200px] px-3 py-2 grid min-w-[200px]">
-                    <img class="h-[200px] justify-self-center" src="./asserts/Redmi125G.webp" alt="" srcset="">
-                    <h1 class="text-center ">Redmi 12 5G</h1>
-                    <h1 class="text-center">From ₹ 9,999</h1>
-                </div>
-                <div class="border border-1 px-3 py-2 min-w-[200px]">
-                    <img class="h-[200px]" src="./asserts/Motorola edge 50 fusion.webp" alt="" srcset="">
-                    <h1 class="text-center">Moto edge 50 Fusion</h1>
-                    <h1 class="text-center">From ₹ 20,999</h1>
-                </div>
-                <div class="border border-1 px-3 py-2 min-w-[200px]">
-                    <img class="h-[200px]" src="./asserts/RealmE p1 Pro 5G.webp" alt="" srcset="">
-                    <h1 class="text-center">Releme P1 5G</h1>
-                    <h1 class="text-center">From ₹ 19,999</h1>
+                <div class="flex md:block md:border border-1 px-3 py-2 min-w-[200px]">
+                    <img class="h-[64px] md:h-[200px]" src="./asserts/PocoM6PRO5G.webp" alt="" srcset="">
+                    <div class="ml-3">
+                        <h1 class="md:text-center text-sm font-bold">Poco M6 Pro</h1>
+                        <h1 class="md:text-center text-sm">From ₹9,500</h1>
+                    </div>
+                    <div class="md:hidden"><i class="fa-solid fa-greater-than"></i></div>
                 </div>
 
-
+                <div class="flex md:block md:border border-1 w-[200px] px-3 py-2 min-w-[200px]">
+                    <div class="flex justify-center w-[50px] md:w-full">
+                        <img class="h-[64px] md:h-[200px] justify-self-center" src="./asserts/Redmi125G.webp" alt=""
+                            srcset="">
+                    </div>
+                    <div class="ml-3">
+                        <h1 class="md:text-center text-sm font-bold">Redmi 12 5G</h1>
+                        <h1 class="md:text-center text-sm">From ₹ 9,999</h1>
+                    </div>
+                    <div class="md:hidden"><i class="fa-solid fa-greater-than"></i></div>
+                </div>
+                <div class="flex md:block md:border border-1 px-3 py-2 min-w-[200px]">
+                    <img class="h-[64px] md:h-[200px]" src="./asserts/Motorola edge 50 fusion.webp" alt="" srcset="">
+                    <div class="ml-3">
+                        <h1 class="md:text-center text-sm font-bold">Moto edge 50 Fusion</h1>
+                        <h1 class="md:text-center text-sm">From ₹ 20,999</h1>
+                    </div>
+                    <div class="md:hidden"><i class="fa-solid fa-greater-than"></i></div>
+                </div>
+                <div class="flex md:block md:border border-1 px-3 py-2 min-w-[200px]">
+                    <img class="h-[64px] md:h-[200px]" src="./asserts/RealmE p1 Pro 5G.webp" alt="" srcset="">
+                    <div class="ml-3">
+                        <h1 class="md:text-center text-sm font-bold">Releme P1 5G</h1>
+                        <h1 class="md:text-center text-sm">From ₹ 19,999</h1>
+                    </div>
+                    <div class="md:hidden"><i class="fa-solid fa-greater-than"></i></div>
+                </div>
             </div>
         </div>
-        <div>
+        <div class="hidden lg:block">
             <img class="h-full " src="./asserts/beatxp.webp" alt="" srcset="">
         </div>
     </div>
