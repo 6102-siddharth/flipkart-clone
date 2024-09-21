@@ -7,7 +7,27 @@
     <title>Project of flipcart</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
+        .arrow1:hover .arrow {
+            /* color: red; */
+            animation-name: rotate;
+            animation-duration: 500ms;
+            animation-fill-mode: forwards;
+            animation-delay: 100ms;
+        }
 
+        @keyframes rotate {
+            from {
+                rotate: 360deg;
+            }
+
+            to {
+                rotate: 180deg;
+            }
+        }
+
+        .showOpns:hover .hiddenlogin {
+            display: block;
+        }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
@@ -21,9 +41,42 @@
             <input class="w-[40vw] text-lg outline-0 bg-transparent" type="text"
                 placeholder="Search for product,Brands More ">
         </div>
-        <div class=" hover:bg-sky-400 p-1 px-4 rounded-lg">
+        <div class=" hover:bg-sky-400 p-1 px-4 rounded-lg showOpns relative z-10">
             <i class="fa-regular fa-circle-user text-lg"></i>
             <button id="buttoncolour" class="rounded-lg" type="button">Login</button>
+            <!-- Hidden login information -->
+            <div class="hiddenlogin h-[280px] w-[300px] absolute top-[50px] bg-white hidden rounded-lg">
+                <div class="flex justify-between bg-white p-4">
+                    <h1>New Customer?</h1>
+                    <h1 id="signup" class="text-blue-600"> Sign Up</h1>
+                </div>
+                <div>
+                    <div class="flex p-1 px-1 hover:bg-gray-200">
+                        <i class="fa-regular fa-circle-user text-lg"></i>
+                        <h2>My Profile</h2>
+                    </div>
+                    <div class="flex p-1 px-1 hover:bg-gray-200">
+                        <i class="fa-solid fa-minimize text-lg"></i>
+                        <h2>Flipkart Plus Zone</h2>
+                    </div>
+                    <div class="flex p-1 px1 hover:bg-gray-200">
+                        <i class="fa-brands fa-codepen text-lg"></i>
+                        <h2>Orders</h2>
+                    </div>
+                    <div class="flex p-1 px-1 hover:bg-gray-200">
+                        <i class="fa-regular fa-heart text-lg"></i>
+                        <h2>Wishlist</h2>
+                    </div>
+                    <div class="flex p-1 px-1 hover:bg-gray-200">
+                        <i class="fa-solid fa-gift text-lg"></i>
+                        <h2>Rewards</h2>
+                    </div>
+                    <div class="flex p-1 px-1 hover:bg-gray-200">
+                        <i class="fa-regular fa-credit-card text-lg"></i>
+                        <h2>Gift Cards</h2>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="bg-slate-100 p-1 px-4 rounded-lg ">
             <i class="fa-solid fa-cart-shopping text-lg"></i>
@@ -33,13 +86,13 @@
             <i class="fa-solid fa-store text-lg"></i>
             <button type="button">Become a Seller</button>
         </div>
-        <div class="hover:bg-slate-100 p-1 px-4 rounded-lg ">
-            <button type="button"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+        <div class="hover:bg-slate-100 p-1 px-4 rounded-lg flex items-center">
+            <button type="button"><i class="fa-solid fa-ellipsis-vertical "></i></button>
         </div>
     </nav>
 
     <div id="category" class="bg-white flex flex-wrap justify-center m-4">
-        <div class=" flex flex-wrap justify-evenly w-[90%]  p-4">
+        <div class=" flex flex-wrap justify-evenly w-[90%] p-4 ">
             <div>
                 <img src="./asserts/Top Offers.webp" alt="">
                 <h1 class="text-center">Top offers</h1>
@@ -53,26 +106,240 @@
                 <img src="./asserts/Appliances.webp" alt="" srcset="">
                 <h1 class="text-center">Appliances</h1>
             </div>
-            <div>
+            <div class="arrow1 relative showOpns">
                 <img src="./asserts/electronics.webp" alt="" srcset="">
-                <h1 class="text-center">Electronics</h1>
+                <h1 class="text-center">Electronics
+                    <i class="fa-solid fa-chevron-down arrow"></i>
+                </h1>
+                <!-- For Hidden Electronics -->
+                <div class="w-[250px] bg-white absolute rounded-lg hidden hiddenlogin">
+                    <div class="flex justify-between p-2 hover:bg-gray-200">
+                        <div>
+                            <h1>Audio </h1>
+                        </div>
+                        <div><i class="lg-hidden hover:visible fa-solid fa-greater-than"></i></div>
+                    </div>
+                    <div class="flex p-2 hover:bg-gray-200">
+                        <div>
+                            <h1>Electronics GST Store</h1>
+                        </div>
+                    </div>
+                    <div class="flex justify-between p-2 hover:bg-gray-200">
+                        <div>
+                            <h1>Computer Peripherals</h1>
+                        </div>
+                        <div><i class="fa-solid fa-greater-than "></i></div>
+                    </div>
+                    <div class="flex justify-between p-2 hover:bg-gray-200">
+                        <div>
+                            <h1>Gaming</h1>
+                        </div>
+                        <div><i class="fa-solid fa-greater-than"></i></div>
+                    </div>
+                    <div class="flex justify-between p-2 hover:bg-gray-200">
+                        <div>
+                            <h1>Health & Peronal Care</h1>
+                        </div>
+                        <div><i class="fa-solid fa-greater-than"></i></div>
+                    </div>
+                    <div class="flex justify-between p-2 hover:bg-gray-200">
+                        <div>
+                            <h1>Laptop Accessories</h1>
+                        </div>
+                        <div><i class="fa-solid fa-greater-than"></i></div>
+                    </div>
+                    <div class="flex justify-between p-2 hover:bg-gray-200">
+                        <div>
+                            <h1>Laptop and Desktop</h1>
+                        </div>
+                        <div><i class="fa-solid fa-greater-than"></i></div>
+                    </div>
+                    <div class="flex justify-between p-2 hover:bg-gray-200">
+                        <div>
+                            <h1>Mobile Accessory</h1>
+                        </div>
+                        <div><i class="fa-solid fa-greater-than"></i></div>
+                    </div>
+                    <div class="flex justify-between p-2 hover:bg-gray-200">
+                        <div>
+                            <h1>Powerbank</h1>
+                        </div>
+                        <div><i class="fa-solid fa-greater-than"></i></div>
+                    </div>
+                    <div class="flex justify-between p-2 hover:bg-gray-200">
+                        <div>
+                            <h1>Smart Home Automation</h1>
+                        </div>
+                        <div><i class="fa-solid fa-greater-than"></i></div>
+                    </div>
+                    <div class="flex justify-between p-2 hover:bg-gray-200">
+                        <div>
+                            <h1>Smart Wearables</h1>
+                        </div>
+                        <div><i class="fa-solid fa-greater-than"></i></div>
+                    </div>
+                    <div class="flex justify-between p-2 hover:bg-gray-200">
+                        <div>
+                            <h1>Storage</h1>
+                        </div>
+                        <div><i class="fa-solid fa-greater-than"></i></div>
+                    </div>
+                    <div class="flex justify-between p-2 hover:bg-gray-200">
+                        <div>
+                            <h1>Tablets</h1>
+                        </div>
+                        <div><i class="fa-solid fa-greater-than"></i></div>
+                    </div>
+                </div>
             </div>
-            <div>
+            <div class="arrow1 relative showOpns">
                 <img src="./asserts/fashion.webp" alt="" srcset="">
-                <h1 class="text-center">Fashion</h1>
+                <h1 class="text-center">Fashion
+                    <i class="fa-solid fa-chevron-down arrow"></i>
+                </h1>
+                <!-- Fashion Hidden Options -->
+                <div class="w-[250px] absolute bg-white rounded-lg hidden hiddenlogin">
+                    <div class="flex justify-between p-2 hover:bg-gray-200">
+                        <div>
+                            <h1>Men's Top Wear</h1>
+                        </div>
+                        <div><i class="fa-solid fa-greater-than"></i> </div>
+                    </div>
+                    <div class="flex justify-between p-2 hover:bg-gray-200">
+                        <div>
+                            <h1>Men's Bottom Wear</h1>
+                        </div>
+                        <div><i class="fa-solid fa-greater-than"></i> </div>
+                    </div>
+                    <div class="flex justify-between p-2 hover:bg-gray-200">
+                        <div>
+                            <h1>Women Ethnic</h1>
+                        </div>
+                        <div><i class="fa-solid fa-greater-than"></i> </div>
+                    </div>
+                    <div class="flex justify-between p-2 hover:bg-gray-200">
+                        <div>
+                            <h1>Men Footwear</h1>
+                        </div>
+                        <div><i class="fa-solid fa-greater-than"></i> </div>
+                    </div>
+                    <div class="flex justify-between p-2 hover:bg-gray-200">
+                        <div>
+                            <h1>Women Footwear</h1>
+                        </div>
+                        <div><i class="fa-solid fa-greater-than"></i> </div>
+                    </div>
+                    <div class="flex justify-between p-2 hover:bg-gray-200">
+                        <div>
+                            <h1>Watches and Accessories</h1>
+                        </div>
+                        <div><i class="fa-solid fa-greater-than"></i> </div>
+                    </div>
+                    <div class="flex justify-between p-2 hover:bg-gray-200">
+                        <div>
+                            <h1>Women Western</h1>
+                        </div>
+                        <div><i class="fa-solid fa-greater-than"></i> </div>
+                    </div>
+                    <div class="flex justify-between p-2 hover:bg-gray-200">
+                        <div>
+                            <h1>Bags,Suitcase</h1>
+                        </div>
+                        <div><i class="fa-solid fa-greater-than"></i> </div>
+                    </div>
+                    <div class="flex justify-between p-2 hover:bg-gray-200">
+                        <div>
+                            <h1>Kids</h1>
+                        </div>
+                        <div><i class="fa-solid fa-greater-than"></i> </div>
+                    </div>
+                    <div class="flex justify-between p-2 hover:bg-gray-200">
+                        <div>
+                            <h1>Essentials</h1>
+                        </div>
+                        <div><i class="fa-solid fa-greater-than"></i> </div>
+                    </div>
+                    <div class="flex justify-between p-2 hover:bg-gray-200">
+                        <div>
+                            <h1>Winter</h1>
+                        </div>
+                        <div><i class="fa-solid fa-greater-than"></i> </div>
+                    </div>
+                </div>
             </div>
             <div>
                 <img src="./asserts/beauty.webp" alt="" srcset="">
                 <h1 class="text-center">Beauty</h1>
             </div>
             <div>
-                <img class="justify-self-center" src="./asserts/home and kitchan.webp" alt="" srcset="">
+                <div class="flex justify-evenly">
+                    <img src="./asserts/home and kitchan.webp" alt="" srcset="">
+                </div>
                 <h1>Home & Kitchen</h1>
             </div>
-            <div>
+            <div class="arrow1 relative showOpns">
                 <img src="./asserts/furniture.webp" alt="" srcset="">
-                <h1 class="text-center">Furniture</h1>
+                <h1 class="text-center">Furniture
+                    <i class="fa-solid fa-chevron-down arrow"></i>
+                </h1>
+                <!-- Hidden options for Furniture -->
+                <div class="w-[250px] bg-white absolute rounded-lg hidden hiddenlogin">
+                    <div class="flex justify-between p-2 hover:bg-gray-200">
+                        <h1>Home Furnishings</h1>
+                        <div><i class="fa-solid fa-greater-than"></i></div>
+                    </div>
+                    <div class="flex justify-between p-2 hover:bg-gray-200">
+                        <h1>Furniture</h1>
+                        <div><i class="fa-solid fa-greater-than"></i></div>
+                    </div>
+                    <div class="flex justify-between p-2 hover:bg-gray-200">
+                        <h1>Living Room Furniture</h1>
+                        <div><i class="fa-solid fa-greater-than"></i></div>
+                    </div>
+                    <div class="flex justify-between p-2 hover:bg-gray-200">
+                        <h1>Kitchan & Dining</h1>
+                        <div><i class="fa-solid fa-greater-than"></i></div>
+                    </div>
+                    <div class="flex justify-between p-2 hover:bg-gray-200">
+                        <h1>Bedroom Furniture</h1>
+                        <div><i class="fa-solid fa-greater-than"></i></div>
+                    </div>
+                    <div class="flex justify-between p-2 hover:bg-gray-200">
+                        <h1>Space Saving Furniture</h1>
+                        <div><i class="fa-solid fa-greater-than"></i></div>
+                    </div>
+                    <div class="flex justify-between p-2 hover:bg-gray-200">
+                        <h1>Home Decor</h1>
+                        <div><i class="fa-solid fa-greater-than"></i></div>
+                    </div>
+                    <div class="flex justify-between p-2 hover:bg-gray-200">
+                        <h1>Tools & Utility</h1>
+                        <div><i class="fa-solid fa-greater-than"></i></div>
+                    </div>
+                    <div class="flex justify-between p-2 hover:bg-gray-200">
+                        <h1>Work Space Furniture</h1>
+                        <div><i class="fa-solid fa-greater-than"></i></div>
+                    </div>
+                    <div class="flex justify-between p-2 hover:bg-gray-200">
+                        <h1>Kids Furniture</h1>
+                        <div><i class="fa-solid fa-greater-than"></i></div>
+                    </div>
+                    <div class="flex justify-between p-2 hover:bg-gray-200">
+                        <h1>Lightings & Electricals</h1>
+                        <div><i class="fa-solid fa-greater-than"></i></div>
+                    </div>
+                    <div class="flex justify-between p-2 hover:bg-gray-200">
+                        <h1>Cleaning & Bath</h1>
+                        <div><i class="fa-solid fa-greater-than"></i></div>
+                    </div>
+                    <div class="flex justify-between p-2 hover:bg-gray-200">
+                        <h1>Pet & Gardening</h1>
+                        <div><i class="fa-solid fa-greater-than"></i></div>
+                    </div>
+
+                </div>
             </div>
+
             <div>
                 <img src="./asserts/Travel.webp" alt="" srcset="">
                 <h1 class="text-center">Travel</h1>
@@ -87,10 +354,11 @@
         <div class="bg-white mx-3 ">
 
             <h1 class="font-bold">Best deals on SmartPhones</h1>
-            <div class="md:flex justify-evenly m-4 p-4 lg:w-[80vw]  w-[94vw] overflow-x-scroll gap-4">
+            <div class="md:flex justify-evenly m-4 p-4 lg:w-[80vw] w-[94vw] overflow-x-scroll gap-4">
                 <div class="flex justify-between">
-                    <div class="flex flex-wrap md:block md:border border-1 px-3 py-2 min-w-[200px] ">
-                        <img class="h-[64px] md:h-[200px]" src="./asserts/Realmep1 5G.webp" alt="" srcset="">
+                    <div class="flex flex-wrap md:grid md:border border-1 min-w-[200px] justify-center ">
+                        <img class="h-[64px] md:h-[200px] hover:m-1 hover:mb-2 m-2 hover:h-[203px] justify-self-center"
+                            src="./asserts/Realmep1 5G.webp" alt="" srcset="">
                         <div class="ml-3 self-center">
                             <h1 class="md:text-center text-sm font-bold">Realme p1</h1>
                             <h1 class="md:text-center text-sm">From ₹ 14,999</h1>
@@ -99,8 +367,9 @@
                     <div class="md:hidden self-center"><i class="fa-solid fa-greater-than"></i></div>
                 </div>
                 <div class="flex justify-between">
-                    <div class="flex md:block md:border border-1 px-3 py-2 min-w-[200px] ">
-                        <img class="h-[64px] md:h-[200px]" src="./asserts/VivoT2Pro5G.webp" alt="" srcset="">
+                    <div class="flex md:grid md:border border-1 min-w-[200px] justify-center ">
+                        <img class="h-[64px] md:h-[200px] hover:m-1 hover:mb-2 m-2 hover:h-[203px] justify-self-center"
+                            src="./asserts/VivoT2Pro5G.webp" alt="" srcset="">
                         <div class="ml-3 self-center">
                             <h1 class="md:text-center text-sm font-bold">Vivo T2 Pro</h1>
                             <h1 class="md:text-center text-sm">From ₹ 20,999</h1>
@@ -109,8 +378,9 @@
                     <div class="md:hidden self-center"><i class="fa-solid fa-greater-than"></i></div>
                 </div>
                 <div class="flex justify-between">
-                    <div class="flex md:block md:border border-1 px-3 py-2 min-w-[200px] ">
-                        <img class="h-[64px] md:h-[200px]" src="./asserts/PocoM6PRO5G.webp" alt="" srcset="">
+                    <div class="flex md:grid md:border border-1 min-w-[200px] justify-center">
+                        <img class="h-[64px] md:h-[200px] hover:m-1 hover:mb-2 m-2 hover:h-[203px] justify-self-center"
+                            src="./asserts/PocoM6PRO5G.webp" alt="" srcset="">
                         <div class="ml-3 self-center">
                             <h1 class="md:text-center text-sm font-bold">Poco M6 Pro</h1>
                             <h1 class="md:text-center text-sm">From ₹9,500</h1>
@@ -119,21 +389,22 @@
                     <div class="md:hidden self-center"><i class="fa-solid fa-greater-than"></i></div>
                 </div>
                 <div class="flex justify-between">
-                    <div class="flex md:block md:border border-1 w-[200px] px-3 py-2 min-w-[200px]">
-                        <div class="flex justify-center w-[50px] md:w-full">
-                            <img class="h-[64px] md:h-[200px]" src="./asserts/Redmi125G.webp" alt="" srcset="">
-                        </div>
-                        <div class="ml-3 self-center gap-x-1">
-                            <h1 class="md:text-center text-sm font-bold justi">Redmi 12 5G</h1>
+                    <div class="flex md:grid md:border border-1 w-[200px] px-3 py-2 min-w-[200px]">
+
+                        <img class="h-[64px] md:h-[200px] hover:m-1 hover:mb-2 m-2 hover:h-[203px] justify-self-center"
+                            src="./asserts/Redmi125G.webp" alt="" srcset="">
+
+                        <div class=" self-center ">
+                            <h1 class="md:text-center text-sm font-bold">Redmi 12 5G</h1>
                             <h1 class="md:text-center text-sm">From ₹ 9,999</h1>
                         </div>
                     </div>
                     <div class="md:hidden self-center"><i class="fa-solid fa-greater-than"></i></div>
                 </div>
                 <div class="flex justify-between">
-                    <div class="flex md:block md:border border-1 px-3 py-2 min-w-[200px]">
-                        <img class="h-[64px] md:h-[200px]" src="./asserts/Motorola edge 50 fusion.webp" alt=""
-                            srcset="">
+                    <div class="flex md:grid md:border border-1 min-w-[200px] justify-center">
+                        <img class="h-[64px] md:h-[200px] hover:m-1 hover:mb-2 m-2 hover:h-[203px] justify-self-center"
+                            src="./asserts/Motorola edge 50 fusion.webp" alt="" srcset="">
                         <div class="ml-3 self-center">
                             <h1 class="md:text-center text-sm font-bold">Moto edge 50 Fusion</h1>
                             <h1 class="md:text-center text-sm">From ₹ 20,999</h1>
@@ -142,8 +413,9 @@
                     <div class="md:hidden self-center"><i class="fa-solid fa-greater-than"></i></div>
                 </div>
                 <div class="flex justify-between">
-                    <div class="flex md:block md:border border-1 px-3 py-2 min-w-[200px]">
-                        <img class="h-[64px] md:h-[200px]" src="./asserts/RealmE p1 Pro 5G.webp" alt="" srcset="">
+                    <div class="flex md:grid md:border border-1 px-3 py-2 min-w-[200px] justify-center">
+                        <img class="h-[64px] md:h-[200px] hover:m-1 hover:mb-2 m-2 hover:h-[203px] justify-self-center"
+                            src="./asserts/RealmE p1 Pro 5G.webp" alt="" srcset="">
                         <div class="ml-3 self-center">
                             <h1 class="md:text-center text-sm font-bold">Releme P1 5G</h1>
                             <h1 class="md:text-center text-sm">From ₹ 19,999</h1>
